@@ -10,13 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     let nextButton = UIButton()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
-       
-    
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+        title = "WELCOME "
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
+        
     }
     
     func setupButton() {
@@ -24,7 +27,9 @@ class ViewController: UIViewController {
         
         nextButton.configuration = .filled()
         nextButton.configuration?.baseBackgroundColor = .systemPink
-        nextButton.configuration?.title = "Next"
+        nextButton.configuration?.title = "Login"
+        
+        nextButton.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -36,7 +41,12 @@ class ViewController: UIViewController {
         ]
         )
     }
-
-
+    @objc func gotoNextScreen(){
+        let nextscreen = OnboardingscreenViewController()
+        nextscreen.title = "Sign Up "
+        navigationController?.pushViewController(nextscreen, animated: true)
+        
+        
+    }
 }
 

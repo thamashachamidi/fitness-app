@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702249842A0AD99600169B68 /* OnboardingscreenViewController.swift */; };
 		707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84252A080F0D00C5BC05 /* AppDelegate.swift */; };
 		707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84272A080F0D00C5BC05 /* SceneDelegate.swift */; };
 		707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84292A080F0D00C5BC05 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		702249842A0AD99600169B68 /* OnboardingscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingscreenViewController.swift; sourceTree = "<group>"; };
 		707B84222A080F0D00C5BC05 /* Ffitness app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ffitness app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		707B84252A080F0D00C5BC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707B84272A080F0D00C5BC05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				707B842E2A080F0E00C5BC05 /* Assets.xcassets */,
 				707B84302A080F0E00C5BC05 /* LaunchScreen.storyboard */,
 				707B84332A080F0E00C5BC05 /* Info.plist */,
+				702249842A0AD99600169B68 /* OnboardingscreenViewController.swift */,
 			);
 			path = "Ffitness app";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */,
+				702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */,
 				707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */,
 				707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */,
 			);
