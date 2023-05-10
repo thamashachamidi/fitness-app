@@ -15,7 +15,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupButton()
         view.backgroundColor = .systemBackground
-        title = "WELCOME "
+        //Add a label
+        let titleLabel = UILabel()
+        
+        titleLabel.text = "WELCOME"
+        titleLabel.font = UIFont.systemFont(ofSize: 32)
+        titleLabel.textAlignment = .center
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
         navigationController?.navigationBar.prefersLargeTitles = true
         
         
