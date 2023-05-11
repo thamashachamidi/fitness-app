@@ -15,14 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupButton()
         view.backgroundColor = .systemBackground
-        //Add a label
-        let titleLabel = UILabel()
-        
-        titleLabel.text = "WELCOME"
-        titleLabel.font = UIFont.systemFont(ofSize: 32)
-        titleLabel.textAlignment = .center
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(titleLabel)
+        title = "Fitness "
         navigationController?.navigationBar.prefersLargeTitles = true
         
         
@@ -33,8 +26,8 @@ class ViewController: UIViewController {
         view.addSubview(nextButton)
         
         nextButton.configuration = .filled()
-        nextButton.configuration?.baseBackgroundColor = .systemPink
-        nextButton.configuration?.title = "Login"
+        nextButton.configuration?.baseBackgroundColor = .systemPurple
+        nextButton.configuration?.title = "Get Started"
         
         nextButton.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         
@@ -47,6 +40,7 @@ class ViewController: UIViewController {
             nextButton.heightAnchor.constraint(equalToConstant: 50)
         ]
         )
+        
     }
     @objc func gotoNextScreen(){
         let nextscreen = OnboardingscreenViewController()
