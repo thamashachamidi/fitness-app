@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
     @objc func gotoNextScreen(){
         let nextscreen = OnboardingscreenViewController()
-        nextscreen.title = "Sign Up "
+        //nextscreen.title = "Sign Up "
         navigationController?.pushViewController(nextscreen, animated: true)
         
         
