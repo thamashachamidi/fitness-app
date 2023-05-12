@@ -31,6 +31,7 @@ class OnboardingscreenViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = UIColor.blue
+        button.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
 
@@ -60,14 +61,11 @@ class OnboardingscreenViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func gotoNextScreen(){
+        let nextscreen = SecondOnboardingscreenViewController()
+        nextscreen.title = "Back "
+        navigationController?.pushViewController(nextscreen, animated: true)
     }
-    */
 
 }
