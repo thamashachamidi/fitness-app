@@ -61,7 +61,7 @@ class SecondOnboardingscreenViewController: UIViewController {
 
     
     @objc func gotoNextScreen(){
-        let nextscreen = SecondOnboardingscreenViewController()
+        let nextscreen = LoginViewController()
         //nextscreen.title = "Back "
         navigationController?.pushViewController(nextscreen, animated: true)
     }
