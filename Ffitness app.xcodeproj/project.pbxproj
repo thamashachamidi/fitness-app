@@ -41,6 +41,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70042BB22A1001EE00FBD9C0 /* Workout  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Workout ";
+			sourceTree = "<group>";
+		};
 		707B84192A080F0D00C5BC05 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +67,7 @@
 		707B84242A080F0D00C5BC05 /* Ffitness app */ = {
 			isa = PBXGroup;
 			children = (
+				70042BB22A1001EE00FBD9C0 /* Workout  */,
 				707B84252A080F0D00C5BC05 /* AppDelegate.swift */,
 				707B84272A080F0D00C5BC05 /* SceneDelegate.swift */,
 				707B84292A080F0D00C5BC05 /* ViewController.swift */,
