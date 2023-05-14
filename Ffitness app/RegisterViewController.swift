@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController {
     let emailField = UITextField()
     let passwordField = UITextField()
     let registerButton = UIButton()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,5 +74,4 @@ class RegisterViewController: UIViewController {
     
 
    
-
 
