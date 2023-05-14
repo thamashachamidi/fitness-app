@@ -28,7 +28,7 @@ class SecondOnboardingscreenViewController: UIViewController {
         
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
-        button.backgroundColor = UIColor.blue
+        button.backgroundColor = UIColor.systemBlue
         button.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)

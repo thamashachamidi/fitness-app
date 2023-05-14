@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         view.addSubview(nextButton)
         
         nextButton.configuration = .filled()
-        nextButton.configuration?.baseBackgroundColor = .systemPurple
+        nextButton.configuration?.baseBackgroundColor = .systemBlue
         nextButton.configuration?.title = "Get Started"
         
         nextButton.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
