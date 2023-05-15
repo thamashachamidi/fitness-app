@@ -14,7 +14,7 @@
 		705837532A12BC5F00FE3989 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705837522A12BC5F00FE3989 /* WorkoutViewController.swift */; };
 		705837552A12BC7600FE3989 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705837542A12BC7600FE3989 /* ProgressViewController.swift */; };
 		705837592A12BD5900FE3989 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705837582A12BD5900FE3989 /* TabBarViewController.swift */; };
-		7058375B2A12BE2000FE3989 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058375A2A12BE2000FE3989 /* ActivityViewController.swift */; };
+		7058375D2A12BFA500FE3989 /* ProgrammesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7058375C2A12BFA500FE3989 /* ProgrammesViewController.swift */; };
 		707993A62A0E673900419943 /* SecondOnboardingscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707993A52A0E673900419943 /* SecondOnboardingscreenViewController.swift */; };
 		707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84252A080F0D00C5BC05 /* AppDelegate.swift */; };
 		707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84272A080F0D00C5BC05 /* SceneDelegate.swift */; };
@@ -32,7 +32,7 @@
 		705837522A12BC5F00FE3989 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		705837542A12BC7600FE3989 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		705837582A12BD5900FE3989 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		7058375A2A12BE2000FE3989 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		7058375C2A12BFA500FE3989 /* ProgrammesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammesViewController.swift; sourceTree = "<group>"; };
 		707993A52A0E673900419943 /* SecondOnboardingscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingscreenViewController.swift; sourceTree = "<group>"; };
 		707B84222A080F0D00C5BC05 /* Ffitness app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ffitness app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		707B84252A080F0D00C5BC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				705837522A12BC5F00FE3989 /* WorkoutViewController.swift */,
 				705837542A12BC7600FE3989 /* ProgressViewController.swift */,
 				705837582A12BD5900FE3989 /* TabBarViewController.swift */,
-				7058375A2A12BE2000FE3989 /* ActivityViewController.swift */,
+				7058375C2A12BFA500FE3989 /* ProgrammesViewController.swift */,
 			);
 			path = "Ffitness app";
 			sourceTree = "<group>";
@@ -166,13 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				70042BB42A101D4C00FBD9C0 /* LoginViewController.swift in Sources */,
+				7058375D2A12BFA500FE3989 /* ProgrammesViewController.swift in Sources */,
 				707993A62A0E673900419943 /* SecondOnboardingscreenViewController.swift in Sources */,
 				705837592A12BD5900FE3989 /* TabBarViewController.swift in Sources */,
 				70042BB62A10202E00FBD9C0 /* RegisterViewController.swift in Sources */,
 				705837532A12BC5F00FE3989 /* WorkoutViewController.swift in Sources */,
 				705837512A12BBFE00FE3989 /* HomeViewController.swift in Sources */,
 				705837552A12BC7600FE3989 /* ProgressViewController.swift in Sources */,
-				7058375B2A12BE2000FE3989 /* ActivityViewController.swift in Sources */,
 				707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */,
 				702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */,
 				707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */,

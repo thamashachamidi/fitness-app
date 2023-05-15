@@ -1,5 +1,5 @@
 //
-//  ActivityViewController.swift
+//  ProgrammesViewController.swift
 //  Ffitness app
 //
 //  Created by Thamasha Chamidi on 2023-05-16.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController {
+class ProgrammesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemPurple
+       
     }
     
 
