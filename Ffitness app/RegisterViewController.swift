@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController {
             }
 
     @objc func gotoNextScreen(){
-           let nextscreen = HomeViewController()
+           let nextscreen = TabBarViewController()
             //nextscreen.title = "Back "
            navigationController?.pushViewController(nextscreen, animated: true)
        }
