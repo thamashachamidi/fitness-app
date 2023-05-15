@@ -64,8 +64,8 @@ class RegisterViewController: UIViewController {
             }
 
     @objc func gotoNextScreen(){
-           let nextscreen = WorkoutListViewController()
-        
+           let nextscreen = HomeViewController()
+            //nextscreen.title = "Back "
            navigationController?.pushViewController(nextscreen, animated: true)
        }
    }
