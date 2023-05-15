@@ -64,7 +64,8 @@ class RegisterViewController: UIViewController {
             }
 
     @objc func gotoNextScreen(){
-           let nextscreen = LoginViewController()
+           let nextscreen = WorkoutListViewController()
+        
            navigationController?.pushViewController(nextscreen, animated: true)
        }
    }

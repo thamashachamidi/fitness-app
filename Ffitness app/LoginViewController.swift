@@ -85,8 +85,8 @@ class LoginViewController: UIViewController {
        }
        
        @objc func signUpTapped() {
-           let registerViewController = RegisterViewController()
-           navigationController?.pushViewController(registerViewController, animated: true)
+           let nextscreen  = RegisterViewController()
+           navigationController?.pushViewController(nextscreen, animated: true)
        }
    }
         

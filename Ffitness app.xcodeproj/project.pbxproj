@@ -10,6 +10,8 @@
 		70042BB42A101D4C00FBD9C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70042BB32A101D4C00FBD9C0 /* LoginViewController.swift */; };
 		70042BB62A10202E00FBD9C0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70042BB52A10202E00FBD9C0 /* RegisterViewController.swift */; };
 		702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702249842A0AD99600169B68 /* OnboardingscreenViewController.swift */; };
+		705837442A126E6200FE3989 /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705837432A126E6200FE3989 /* WorkoutListViewController.swift */; };
+		705837482A127B8C00FE3989 /* extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705837472A127B8C00FE3989 /* extensionViewController.swift */; };
 		707993A62A0E673900419943 /* SecondOnboardingscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707993A52A0E673900419943 /* SecondOnboardingscreenViewController.swift */; };
 		707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84252A080F0D00C5BC05 /* AppDelegate.swift */; };
 		707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B84272A080F0D00C5BC05 /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 		70042BB32A101D4C00FBD9C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70042BB52A10202E00FBD9C0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		702249842A0AD99600169B68 /* OnboardingscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingscreenViewController.swift; sourceTree = "<group>"; };
+		705837432A126E6200FE3989 /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		705837472A127B8C00FE3989 /* extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionViewController.swift; sourceTree = "<group>"; };
 		707993A52A0E673900419943 /* SecondOnboardingscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingscreenViewController.swift; sourceTree = "<group>"; };
 		707B84222A080F0D00C5BC05 /* Ffitness app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ffitness app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		707B84252A080F0D00C5BC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				707993A52A0E673900419943 /* SecondOnboardingscreenViewController.swift */,
 				70042BB32A101D4C00FBD9C0 /* LoginViewController.swift */,
 				70042BB52A10202E00FBD9C0 /* RegisterViewController.swift */,
+				705837432A126E6200FE3989 /* WorkoutListViewController.swift */,
+				705837472A127B8C00FE3989 /* extensionViewController.swift */,
 			);
 			path = "Ffitness app";
 			sourceTree = "<group>";
@@ -150,10 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705837442A126E6200FE3989 /* WorkoutListViewController.swift in Sources */,
 				70042BB42A101D4C00FBD9C0 /* LoginViewController.swift in Sources */,
 				707993A62A0E673900419943 /* SecondOnboardingscreenViewController.swift in Sources */,
 				70042BB62A10202E00FBD9C0 /* RegisterViewController.swift in Sources */,
 				707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */,
+				705837482A127B8C00FE3989 /* extensionViewController.swift in Sources */,
 				702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */,
 				707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */,
 				707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */,
