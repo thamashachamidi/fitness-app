@@ -13,6 +13,8 @@ class WorkoutViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Workout"
+        
+        
     
     }
     

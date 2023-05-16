@@ -11,6 +11,7 @@ class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         let vc1 = HomeViewController()
         let vc2 = WorkoutViewController()
@@ -36,6 +37,8 @@ class TabBarViewController: UITabBarController {
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
         nav4.navigationBar.prefersLargeTitles = true
+        
+       
         
         setViewControllers([nav1,nav2,nav3,nav4], animated: false)
         

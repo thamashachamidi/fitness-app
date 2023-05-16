@@ -13,7 +13,6 @@ class RegisterViewController: UIViewController {
     let emailField = UITextField()
     let passwordField = UITextField()
     let registerButton = UIButton()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,38 +40,34 @@ class RegisterViewController: UIViewController {
      
         registerButton.setTitle("Register", for: .normal)
         registerButton.setTitleColor(.white, for: .normal)
-        registerButton.backgroundColor = .systemBlue
+        registerButton.backgroundColor = .systemMint
         registerButton.layer.cornerRadius = 10
         registerButton.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         registerButton.translatesAutoresizingMaskIntoConstraints = false
-               view.addSubview(registerButton)
+        view.addSubview(registerButton)
      
         let stackView = UIStackView(arrangedSubviews: [usernameField, emailField, passwordField, registerButton])
-              stackView.axis = .vertical
-              stackView.spacing = 20
-              stackView.translatesAutoresizingMaskIntoConstraints = false
-              view.addSubview(stackView)
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
 
-        
         NSLayoutConstraint.activate([
-                    stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                    stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                    stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-                    stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-                    registerButton.heightAnchor.constraint(equalToConstant: 50)
-                ])
-            }
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            
+            registerButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            usernameField.heightAnchor.constraint(equalToConstant: 40),
+            emailField.heightAnchor.constraint(equalToConstant: 40),
+            passwordField.heightAnchor.constraint(equalToConstant: 40)
+        ])
+    }
 
-    @objc func gotoNextScreen(){
-           let nextscreen = TabBarViewController()
-            //nextscreen.title = "Back "
-           navigationController?.pushViewController(nextscreen, animated: true)
-       }
-   }
-        
-     
-    
-    
-
-   
-
+    @objc func gotoNextScreen() {
+        let nextScreen = TabBarViewController()
+        navigationController?.pushViewController(nextScreen, animated: true)
+    }
+}
