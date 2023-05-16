@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
-    let usernameField = UITextField()
     let emailField = UITextField()
     let passwordField = UITextField()
     let registerButton = UIButton()
@@ -18,12 +18,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         title = "Create Account"
         view.backgroundColor = .systemBackground
-        
-        usernameField.placeholder = "Username"
-        usernameField.borderStyle = .roundedRect
-        usernameField.autocapitalizationType = .none
-        usernameField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(usernameField)
         
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
@@ -46,7 +40,7 @@ class RegisterViewController: UIViewController {
         registerButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(registerButton)
      
-        let stackView = UIStackView(arrangedSubviews: [usernameField, emailField, passwordField, registerButton])
+        let stackView = UIStackView(arrangedSubviews: [emailField, passwordField, registerButton])
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,14 +54,29 @@ class RegisterViewController: UIViewController {
             
             registerButton.heightAnchor.constraint(equalToConstant: 50),
             
-            usernameField.heightAnchor.constraint(equalToConstant: 40),
             emailField.heightAnchor.constraint(equalToConstant: 40),
             passwordField.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 
     @objc func gotoNextScreen() {
-        let nextScreen = TabBarViewController()
-        navigationController?.pushViewController(nextScreen, animated: true)
+        guard let email = emailField.text, let password = passwordField.text else {
+            // Handle empty fields or other validation errors
+            return
+        }
+
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                // Handle authentication error
+                print("Error creating user:", error)
+            } else {
+                // User successfully registered
+                print("User registered successfully")
+                
+                // Proceed to the next screen (TabBarViewController)
+                let nextScreen = TabBarViewController()
+                self.navigationController?.pushViewController(nextScreen, animated: true)
+            }
+        }
     }
 }
