@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Hey, Welcome Back ..."
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemMint
         
         
         emailField.placeholder = "Email"

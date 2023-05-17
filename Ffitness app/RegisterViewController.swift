@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Account"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemMint
         
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
@@ -34,7 +34,7 @@ class RegisterViewController: UIViewController {
      
         registerButton.setTitle("Register", for: .normal)
         registerButton.setTitleColor(.white, for: .normal)
-        registerButton.backgroundColor = .systemMint
+        registerButton.backgroundColor = .systemBlue
         registerButton.layer.cornerRadius = 10
         registerButton.addTarget(self, action: #selector(gotoNextScreen), for: .touchUpInside)
         registerButton.translatesAutoresizingMaskIntoConstraints = false
