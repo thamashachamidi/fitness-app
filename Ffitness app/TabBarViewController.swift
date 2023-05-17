@@ -12,11 +12,15 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
         let vc1 = HomeViewController()
         let vc2 = WorkoutViewController()
         let vc3 = ProgressViewController()
         let vc4 = ProgrammesViewController()
+        
+        vc1.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        vc2.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        vc3.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        vc4.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 3)
         
         vc1.title = "Home"
         vc2.title = "Workout"
@@ -33,19 +37,12 @@ class TabBarViewController: UITabBarController {
         let nav3 = UINavigationController(rootViewController: vc3)
         let nav4 = UINavigationController(rootViewController: vc4)
         
-        
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
         nav4.navigationBar.prefersLargeTitles = true
         
-       
-        
-        setViewControllers([nav1,nav2,nav3,nav4], animated: false)
-        
+        setViewControllers([nav1, nav2, nav3, nav4], animated: false)
     }
-    
-
-   
-
 }
+

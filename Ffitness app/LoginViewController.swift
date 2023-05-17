@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
                 
                 
                 // Proceed to the next screen (TabBarViewController)
-                let nextScreen = TabBarViewController()
+                let nextScreen = HomeViewController()
                 self.navigationController?.pushViewController(nextScreen, animated: true)
             }
         }

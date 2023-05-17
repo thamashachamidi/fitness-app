@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemBackground
 
         let descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -26,10 +26,7 @@ class HomeViewController: UIViewController {
         descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         descriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
-        // Create a tab bar
-        let tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        tabBarItem.selectedImage = UIImage(systemName: "house.fill")
-        
+      
 
         // Set the tab bar item for the view controller
         tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -10)

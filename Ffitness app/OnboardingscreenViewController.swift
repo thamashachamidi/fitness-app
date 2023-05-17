@@ -9,12 +9,14 @@ import UIKit
 
 class OnboardingscreenViewController: UIViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemMint
 
-     
+        let imageView = UIImageView(image: UIImage(named: "Image")) // Replace "your_image_name" with the actual name of your image asset
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageView)
 
         let titleLabel = UILabel()
         titleLabel.text = "Track Your Goal"
@@ -27,7 +29,7 @@ class OnboardingscreenViewController: UIViewController {
         descriptionLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
-        
+
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = UIColor.systemBlue
@@ -35,8 +37,6 @@ class OnboardingscreenViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
 
-        
-        
         let bottomConstraint = button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
         let leadingConstraint = button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
         let trailingConstraint = button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
@@ -44,12 +44,10 @@ class OnboardingscreenViewController: UIViewController {
 
         NSLayoutConstraint.activate([bottomConstraint, leadingConstraint, trailingConstraint, heightConstraint])
 
-
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
+        let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel, descriptionLabel])
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
         view.addSubview(stackView)
 
         NSLayoutConstraint.activate([
@@ -57,15 +55,10 @@ class OnboardingscreenViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
-    
     }
-    
 
-    
-    @objc func gotoNextScreen(){
+    @objc func gotoNextScreen() {
         let nextscreen = SecondOnboardingscreenViewController()
-        //nextscreen.title = "Back "
         navigationController?.pushViewController(nextscreen, animated: true)
     }
-
 }
