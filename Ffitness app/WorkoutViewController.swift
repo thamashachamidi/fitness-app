@@ -126,9 +126,9 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
         exercises = [
             Exercise(name: "Walking", description: "Walking helps improve heart and lung health, enhancing overall cardiovascular fitness.", imageName: "walking"),
             Exercise(name: "Push up ", description: "One of the great benefits of push-ups is that they require no equipment and can be done anywhere. Whether you're at home, at the gym, or traveling, push-ups offer a convenient and accessible exercise option.", imageName: "pushup"),
-            Exercise(name: "Cardio ", description: "Cardio exercise has been linked to better sleep quality. It can help regulate sleep patterns, promote relaxation, and reduce insomnia symptoms, leading to more restful and rejuvenating sleep.", imageName: ""),
-            Exercise(name: "Exercise 4", description: "Exercise 4 Description", imageName: ""),
-            Exercise(name: "Exercise 5", description: "Exercise 5 Description", imageName: "")
+            Exercise(name: "Cardio ", description: "Cardio exercise has been linked to better sleep quality. It can help regulate sleep patterns, promote relaxation, and reduce insomnia symptoms, leading to more restful and rejuvenating sleep.", imageName: "cardio"),
+            Exercise(name: "Lunges", description: "Leg Strength and Muscle Development", imageName: "Lunge"),
+            Exercise(name: "Pull-ups", description: "Increases Overall Body Strength", imageName: "")
         ]
     }
     

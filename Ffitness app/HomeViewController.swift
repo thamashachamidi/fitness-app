@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Home"
         
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
+        
         let descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.text = "Explore more workout"
