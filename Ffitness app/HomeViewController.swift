@@ -11,8 +11,9 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemBackground
         title = "Home"
+        
         let descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.text = "Explore more workout"
