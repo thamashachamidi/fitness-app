@@ -13,7 +13,7 @@ class SecondOnboardingscreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
 
-        let imageView = UIImageView(image: UIImage(named: "onboardingimage")) // Replace "your_image_name" with the actual name of your image asset
+        let imageView = UIImageView(image: UIImage(named: "onboardingimage"))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)

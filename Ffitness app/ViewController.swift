@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         // Add centered title
         let titleLabel = UILabel()
-        titleLabel.text = "Welcome to Fitness App"
+        titleLabel.text = "Welcome to Getfit"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 28)
         view.addSubview(titleLabel)

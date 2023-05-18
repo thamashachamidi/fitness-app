@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Hey, Welcome Back ..."
+        title = " Welcome Back"
         view.backgroundColor = .systemMint
         
         
@@ -104,7 +104,7 @@ class LoginViewController: UIViewController {
                 
                 
                 
-                // Proceed to the next screen (TabBarViewController)
+                
                 let nextScreen = TabBarViewController()
                 self.navigationController?.pushViewController(nextScreen, animated: true)
             }
