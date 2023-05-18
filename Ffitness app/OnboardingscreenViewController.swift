@@ -11,7 +11,7 @@ class OnboardingscreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemBackground
 
         let imageView = UIImageView(image: UIImage(named: "Image")) // Replace "your_image_name" with the actual name of your image asset
         imageView.contentMode = .scaleAspectFit

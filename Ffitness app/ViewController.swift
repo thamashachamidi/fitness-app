@@ -10,16 +10,17 @@ import UIKit
 class ViewController: UIViewController {
 
     let nextButton = UIButton()
+    let logoImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         
         // Add centered title
         let titleLabel = UILabel()
-        titleLabel.text = "Welcome to Getfit"
+        titleLabel.text = "FitVibe"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 28)
         view.addSubview(titleLabel)
@@ -30,6 +31,19 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50) // Adjust the constant value as needed
+        ])
+        
+        // Add logo image view
+        logoImageView.image = UIImage(named: "Logo")
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logoImageView)
+        
+        NSLayoutConstraint.activate([
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -50), // Adjust the constant value as needed
+            logoImageView.widthAnchor.constraint(equalToConstant: 200), // Adjust the width as needed
+            logoImageView.heightAnchor.constraint(equalToConstant: 200) // Adjust the height as needed
         ])
     }
     
@@ -59,3 +73,5 @@ class ViewController: UIViewController {
     }
     
 }
+
+

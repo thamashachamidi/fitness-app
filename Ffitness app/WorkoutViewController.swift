@@ -25,7 +25,7 @@ class ExerciseCardCell: UICollectionViewCell {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 3
         label.textColor = .white
         return label
@@ -98,12 +98,16 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
         return collectionView
     }()
     
-    var exercises: [Exercise] = [] // Replace with your own exercise data
+    var exercises: [Exercise] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         title = "Workout"
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
+        
+      
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -118,11 +122,11 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-        // Dummy exercise data
+       
         exercises = [
-            Exercise(name: "Exercise 1", description: "Exercise 1 Description", imageName: "Exercise1"),
-            Exercise(name: "Exercise 2", description: "Exercise 2 Description", imageName: ""),
-            Exercise(name: "Exercise 3", description: "Exercise 3 Description", imageName: ""),
+            Exercise(name: "Walking", description: "Walking helps improve heart and lung health, enhancing overall cardiovascular fitness.", imageName: "walking"),
+            Exercise(name: "Push up ", description: "One of the great benefits of push-ups is that they require no equipment and can be done anywhere. Whether you're at home, at the gym, or traveling, push-ups offer a convenient and accessible exercise option.", imageName: "pushup"),
+            Exercise(name: "Cardio ", description: "Cardio exercise has been linked to better sleep quality. It can help regulate sleep patterns, promote relaxation, and reduce insomnia symptoms, leading to more restful and rejuvenating sleep.", imageName: ""),
             Exercise(name: "Exercise 4", description: "Exercise 4 Description", imageName: ""),
             Exercise(name: "Exercise 5", description: "Exercise 5 Description", imageName: "")
         ]

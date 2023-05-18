@@ -24,6 +24,8 @@
 		707B842D2A080F0D00C5BC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707B842B2A080F0D00C5BC05 /* Main.storyboard */; };
 		707B842F2A080F0E00C5BC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707B842E2A080F0E00C5BC05 /* Assets.xcassets */; };
 		707B84322A080F0E00C5BC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707B84302A080F0E00C5BC05 /* LaunchScreen.storyboard */; };
+		7082A9052A1672A200EBE1C8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9042A1672A200EBE1C8 /* FirebaseFirestore */; };
+		7082A9072A1672B200EBE1C8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9062A1672B200EBE1C8 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7020F6822A13C00D00764DFF /* FirebaseAuth in Frameworks */,
+				7082A9052A1672A200EBE1C8 /* FirebaseFirestore in Frameworks */,
+				7082A9072A1672B200EBE1C8 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +68,7 @@
 			children = (
 				707B84242A080F0D00C5BC05 /* Ffitness app */,
 				707B84232A080F0D00C5BC05 /* Products */,
+				7082A9032A1672A200EBE1C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +104,13 @@
 			path = "Ffitness app";
 			sourceTree = "<group>";
 		};
+		7082A9032A1672A200EBE1C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +129,8 @@
 			name = "Ffitness app";
 			packageProductDependencies = (
 				7020F6812A13C00D00764DFF /* FirebaseAuth */,
+				7082A9042A1672A200EBE1C8 /* FirebaseFirestore */,
+				7082A9062A1672B200EBE1C8 /* FirebaseFirestoreSwift */,
 			);
 			productName = "Ffitness app";
 			productReference = 707B84222A080F0D00C5BC05 /* Ffitness app.app */;
@@ -421,6 +435,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7020F6802A13C00D00764DFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		7082A9042A1672A200EBE1C8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7020F6802A13C00D00764DFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7082A9062A1672B200EBE1C8 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7020F6802A13C00D00764DFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

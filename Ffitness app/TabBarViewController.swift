@@ -19,7 +19,7 @@ class TabBarViewController: UITabBarController {
         let vc4 = UINavigationController(rootViewController: ProgrammesViewController())
         
         
-        vc1.tabBarItem.image = UIImage(systemName: "house")
+        //vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "workout")
         vc3 .tabBarItem.image  = UIImage(systemName: "maginfyingglass")
         vc4.tabBarItem.image = UIImage(systemName: "more")
