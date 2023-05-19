@@ -26,6 +26,7 @@
 		707B84322A080F0E00C5BC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707B84302A080F0E00C5BC05 /* LaunchScreen.storyboard */; };
 		7082A9052A1672A200EBE1C8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9042A1672A200EBE1C8 /* FirebaseFirestore */; };
 		7082A9072A1672B200EBE1C8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9062A1672B200EBE1C8 /* FirebaseFirestoreSwift */; };
+		7082A90D2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		707B842E2A080F0E00C5BC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		707B84312A080F0E00C5BC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		707B84332A080F0E00C5BC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				705837582A12BD5900FE3989 /* TabBarViewController.swift */,
 				7058375C2A12BFA500FE3989 /* ProgrammesViewController.swift */,
 				7020F67E2A13B76F00764DFF /* GoogleService-Info.plist */,
+				7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */,
 			);
 			path = "Ffitness app";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				705837512A12BBFE00FE3989 /* HomeViewController.swift in Sources */,
 				705837552A12BC7600FE3989 /* ProgressViewController.swift in Sources */,
 				707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */,
+				7082A90D2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift in Sources */,
 				702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */,
 				707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */,
 				707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */,
