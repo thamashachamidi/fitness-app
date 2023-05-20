@@ -4,7 +4,6 @@
 //
 //  Created by Thamasha Chamidi on 2023-05-16.
 //
-
 import UIKit
 
 class ExerciseCardCell: UICollectionViewCell {
@@ -26,7 +25,7 @@ class ExerciseCardCell: UICollectionViewCell {
     let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.numberOfLines = 3
+        label.numberOfLines = 0
         label.textColor = .white
         return label
     }()
@@ -107,8 +106,6 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)]
         
-      
-        
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -122,7 +119,6 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-       
         exercises = [
             Exercise(name: "Walking", description: "Walking helps improve heart and lung health, enhancing overall cardiovascular fitness.", imageName: "walking"),
             Exercise(name: "Push up ", description: "One of the great benefits of push-ups is that they require no equipment and can be done anywhere. Whether you're at home, at the gym, or traveling, push-ups offer a convenient and accessible exercise option.", imageName: "pushup"),
@@ -147,12 +143,118 @@ class WorkoutViewController: UIViewController, UICollectionViewDataSource, UICol
         return cell
     }
     
-    // ...
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let exercise = exercises[indexPath.item]
+        let popupViewController = CardPopupViewController(exercise: exercise)
+        popupViewController.modalPresentationStyle = .overFullScreen
+        present(popupViewController, animated: true, completion: nil)
+    }
 }
 
 struct Exercise {
     let name: String
     let description: String
     let imageName: String
+}
+
+class CardPopupViewController: UIViewController {
+    private let exercise: Exercise
+    
+    init(exercise: Exercise) {
+        self.exercise = exercise
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        applyCardStyling()
+    }
+    
+    private func setupViews() {
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
+        let cardView = UIView()
+        cardView.backgroundColor = .white
+        cardView.layer.cornerRadius = 8
+        cardView.layer.masksToBounds = true
+        view.addSubview(cardView)
+        
+        cardView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            cardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardView.widthAnchor.constraint(equalToConstant: 300),
+            cardView.heightAnchor.constraint(equalToConstant: 400)
+        ])
+        
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: exercise.imageName)
+        cardView.addSubview(imageView)
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: cardView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 200)
+        ])
+        
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        titleLabel.numberOfLines = 2
+        titleLabel.textColor = .black
+        titleLabel.text = exercise.name
+        cardView.addSubview(titleLabel)
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16)
+        ])
+        
+        let descriptionLabel = UILabel()
+        descriptionLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.textColor = .black
+        descriptionLabel.text = exercise.description
+        cardView.addSubview(descriptionLabel)
+        
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            descriptionLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
+            descriptionLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
+            descriptionLabel.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16)
+        ])
+        
+        let closeButton = UIButton(type: .system)
+        closeButton.setTitle("Close", for: .normal)
+        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        closeButton.setTitleColor(.black, for: .normal)
+        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        cardView.addSubview(closeButton)
+        
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            closeButton.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 8),
+            closeButton.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -8)
+        ])
+    }
+    
+    private func applyCardStyling() {
+        // No additional styling is required for the popup view
+    }
+    
+    @objc private func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

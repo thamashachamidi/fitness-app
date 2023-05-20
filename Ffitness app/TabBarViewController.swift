@@ -12,6 +12,8 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+    
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: WorkoutViewController())
@@ -20,9 +22,9 @@ class TabBarViewController: UITabBarController {
         
         
         //vc1.tabBarItem.image = UIImage(systemName: "house")
-        vc2.tabBarItem.image = UIImage(systemName: "workout")
-        vc3 .tabBarItem.image  = UIImage(systemName: "maginfyingglass")
-        vc4.tabBarItem.image = UIImage(systemName: "more")
+        //vc2.tabBarItem.image = UIImage(systemName: "workout")
+        //vc3 .tabBarItem.image  = UIImage(systemName: "maginfyingglass")
+        //vc4.tabBarItem.image = UIImage(systemName: "more")
         
         vc1.title = "House"
         vc2.title = "workout"
@@ -31,5 +33,8 @@ class TabBarViewController: UITabBarController {
       
         
         setViewControllers([vc1, vc2, vc3,vc4], animated: true)
+    
+   
     }
 }
+

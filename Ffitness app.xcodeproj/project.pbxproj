@@ -27,6 +27,8 @@
 		7082A9052A1672A200EBE1C8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9042A1672A200EBE1C8 /* FirebaseFirestore */; };
 		7082A9072A1672B200EBE1C8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7082A9062A1672B200EBE1C8 /* FirebaseFirestoreSwift */; };
 		7082A90D2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */; };
+		70A598552A17CD9100D96C96 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A598542A17CD9100D96C96 /* ProfileViewController.swift */; };
+		70B180BC2A177B6200AB4B6F /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B180BB2A177B6200AB4B6F /* CardDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		707B84312A080F0E00C5BC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		707B84332A080F0E00C5BC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScheduleViewController.swift; sourceTree = "<group>"; };
+		70A598542A17CD9100D96C96 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		70B180BB2A177B6200AB4B6F /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				7058375C2A12BFA500FE3989 /* ProgrammesViewController.swift */,
 				7020F67E2A13B76F00764DFF /* GoogleService-Info.plist */,
 				7082A90C2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift */,
+				70B180BB2A177B6200AB4B6F /* CardDetailsViewController.swift */,
+				70A598542A17CD9100D96C96 /* ProfileViewController.swift */,
 			);
 			path = "Ffitness app";
 			sourceTree = "<group>";
@@ -201,10 +207,12 @@
 				70042BB62A10202E00FBD9C0 /* RegisterViewController.swift in Sources */,
 				705837532A12BC5F00FE3989 /* WorkoutViewController.swift in Sources */,
 				705837512A12BBFE00FE3989 /* HomeViewController.swift in Sources */,
+				70B180BC2A177B6200AB4B6F /* CardDetailsViewController.swift in Sources */,
 				705837552A12BC7600FE3989 /* ProgressViewController.swift in Sources */,
 				707B842A2A080F0D00C5BC05 /* ViewController.swift in Sources */,
 				7082A90D2A16B1DB00EBE1C8 /* CustomScheduleViewController.swift in Sources */,
 				702249852A0AD99600169B68 /* OnboardingscreenViewController.swift in Sources */,
+				70A598552A17CD9100D96C96 /* ProfileViewController.swift in Sources */,
 				707B84262A080F0D00C5BC05 /* AppDelegate.swift in Sources */,
 				707B84282A080F0D00C5BC05 /* SceneDelegate.swift in Sources */,
 			);
