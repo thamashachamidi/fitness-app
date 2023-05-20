@@ -61,19 +61,19 @@ class RegisterViewController: UIViewController {
 
     @objc func gotoNextScreen() {
         guard let email = emailField.text, let password = passwordField.text else {
-            // Handle empty fields or other validation errors
+            // validation errors
             return
         }
 
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                // Handle authentication error
+                //  authentication error message
                 print("Error creating user:", error)
             } else {
-                // User successfully registered
+                // user registration message
                 print("User registered successfully")
                 
-                // Proceed to the next screen (TabBarViewController)
+                // nextscreen navigation code
                 let nextScreen = TabBarViewController()
                 self.navigationController?.pushViewController(nextScreen, animated: true)
             }

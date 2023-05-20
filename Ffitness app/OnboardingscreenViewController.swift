@@ -13,23 +13,27 @@ class OnboardingscreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
 
-        let imageView = UIImageView(image: UIImage(named: "Image")) // Replace "your_image_name" with the actual name of your image asset
+        //image code
+        let imageView = UIImageView(image: UIImage(named: "Image"))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
 
+        //title code
         let titleLabel = UILabel()
         titleLabel.text = "Track Your Goal"
         titleLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
 
+        //description code
         let descriptionLabel = UILabel()
         descriptionLabel.text = "Get fit and healthy with our app. Track your workouts, set goals, and see your progress over time."
         descriptionLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
 
+        //skip btn 
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = UIColor.systemBlue

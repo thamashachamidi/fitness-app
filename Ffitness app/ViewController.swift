@@ -18,22 +18,22 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        // Add centered title
+        // title
         let titleLabel = UILabel()
         titleLabel.text = "FitVibe"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 28)
         view.addSubview(titleLabel)
         
-        // Position the title label slightly lower
+        // title position 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50) // Adjust the constant value as needed
+            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50)
         ])
         
-        // Add logo image view
+        // Adding logo image
         logoImageView.image = UIImage(named: "Logo")
         logoImageView.contentMode = .scaleAspectFit
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -50), // Adjust the constant value as needed
-            logoImageView.widthAnchor.constraint(equalToConstant: 200), // Adjust the width as needed
-            logoImageView.heightAnchor.constraint(equalToConstant: 200) // Adjust the height as needed
+            logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -50),
+            logoImageView.widthAnchor.constraint(equalToConstant: 200),
+            logoImageView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     

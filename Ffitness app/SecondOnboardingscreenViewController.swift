@@ -13,23 +13,27 @@ class SecondOnboardingscreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
 
+        //image compoenent
         let imageView = UIImageView(image: UIImage(named: "onboardingimage"))
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
 
+        //title
         let titleLabel = UILabel()
         titleLabel.text = "Work out anywhere"
         titleLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
 
+        //description
         let descriptionLabel = UILabel()
         descriptionLabel.text = "You can do your workout at home without any equipment, outside, or at the gym"
         descriptionLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
 
+        //btn 
         let button = UIButton()
         button.setTitle("Skip", for: .normal)
         button.backgroundColor = UIColor.systemBlue
@@ -52,7 +56,7 @@ class SecondOnboardingscreenViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100), // Adjust the constant value as needed
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])

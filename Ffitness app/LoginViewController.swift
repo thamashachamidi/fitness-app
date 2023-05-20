@@ -84,27 +84,27 @@ class LoginViewController: UIViewController {
     
     @objc func gotoNextScreen() {
         guard let email = emailField.text, let password = passwordField.text else {
-            // Handle empty fields or other validation errors
+            // validation errors
             return
         }
         
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                // Handle login error
+                // login error
                 print("Error logging in:", error)
                 
-                // Display an error message to the user
+                // Displaying an error message to the  current user
                 let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAction)
                 self.present(alertController, animated: true, completion: nil)
             } else {
-                // User logged
+                // successfull  error message to the user after login 
                 print("User logged in successfully")
                 
                 
                 
-                
+                //next screen navi code 
                 let nextScreen = TabBarViewController()
                 self.navigationController?.pushViewController(nextScreen, animated: true)
             }
