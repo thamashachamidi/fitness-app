@@ -25,23 +25,24 @@ class CustomScheduleViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        title = "Schedule"
         
-        // Create  workouts
+        //  workouts list creation
         let strengthTraining = Workout(name: "Strength Training", durationMinutes: 60)
         let cardio = Workout(name: "Cardio Workout", durationMinutes: 45)
         let flexibility = Workout(name: "Flexibility Training", durationMinutes: 30)
         
-        // Create  schedule
+        // schedule make
         schedule = Schedule(workouts: [strengthTraining, cardio, flexibility], restDays: 2)
         
-        // Configure table view
+        // Configuration table view
         tableView.dataSource = self
         tableView.delegate = self
         tableView.frame = view.bounds
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         view.addSubview(tableView)
         
-        //  "Add" button or plus icon
+        //   plus icon
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWorkout))
         navigationItem.rightBarButtonItem = addButton
     }
@@ -62,7 +63,7 @@ class CustomScheduleViewController: UIViewController, UITableViewDataSource, UIT
    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Handle row selection
+        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -72,8 +73,7 @@ class CustomScheduleViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
-    // MARK: - Add Workout
-    
+   
     @objc func addWorkout() {
         let alert = UIAlertController(title: "Add Workout", message: nil, preferredStyle: .alert)
         

@@ -17,8 +17,8 @@ class TabBarViewController: UITabBarController {
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: WorkoutViewController())
-        let vc3 = UINavigationController(rootViewController: ProgressViewController())
-        let vc4 = UINavigationController(rootViewController: ProgrammesViewController())
+        let vc3 = UINavigationController(rootViewController: CustomScheduleViewController())
+        let vc4 = UINavigationController(rootViewController: ProfileViewController())
         
         
         //vc1.tabBarItem.image = UIImage(systemName: "house")
@@ -28,8 +28,8 @@ class TabBarViewController: UITabBarController {
         
         vc1.title = "House"
         vc2.title = "workout"
-        vc3.title = "Progress"
-        vc4.title = "Programmes"
+        vc3.title = "Schedule"
+        vc4.title = "Profile"
       
         
         setViewControllers([vc1, vc2, vc3,vc4], animated: true)
