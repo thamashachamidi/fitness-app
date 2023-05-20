@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Account"
-        view.backgroundColor = .systemMint
+        view.backgroundColor = .systemBackground
         
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
 
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                //  authentication error message
+                
                 print("Error creating user:", error)
             } else {
                 // user registration message
