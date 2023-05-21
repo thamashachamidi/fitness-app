@@ -40,9 +40,10 @@ class ProgressViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Update Progress", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.addTarget(ProgressViewController.self, action: #selector(updateProgressButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(updateProgressButtonTapped), for: .touchUpInside)
         return button
     }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

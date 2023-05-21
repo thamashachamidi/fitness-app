@@ -72,7 +72,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let quote = "This is a motivational quote that inspires you to achieve your fitness goals."
+        let quote = "Don't watch the clock; do what it does. Keep going."
         quoteView.configure(with: quote)
     }
     
@@ -82,7 +82,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             FeaturedWorkout(name: "HIIT", image: "HIIT", description: "High-intensity interval training (HIIT) is a popular workout that alternates between intense bursts of exercise and short recovery periods.", duration: "Duration: 30 minutes"),
             FeaturedWorkout(name: "Yoga Flow", image: "Yoga flow", description: "Yoga flow is a dynamic sequence of yoga poses that helps improve flexibility, strength, and balance.", duration: "Duration: 60 minutes"),
             FeaturedWorkout(name: "Strength Training", image: "Strength Training", description: "Strength training involves exercises that target specific muscle groups to build strength and increase muscle mass.", duration: "Duration: 45 minutes"),
-            FeaturedWorkout(name: "Cardio Blast", image: "workout4", description: "Cardio blast is a high-intensity cardio workout that helps improve cardiovascular fitness and burn calories.", duration: "Duration: 40 minutes")
+            FeaturedWorkout(name: "Cardio Blast", image: "", description: "Cardio blast is a high-intensity cardio workout that helps improve cardiovascular fitness and burn calories.", duration: "Duration: 40 minutes")
         ]
     }
     
